@@ -1,0 +1,611 @@
+/*Fonts
+    Title: Raleway
+    Body: Montserrat */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Raleway:wght@500&display=swap");
+/* Colors:
+    Header: #BE9FE1 
+    Body:   #C9B6E4
+    Footer: #E1CCEC
+    Alt:    #F1F1F6*/
+
+* {
+  margin: 0;
+  padding: 0;
+}
+header {
+  background-color: #e1ccec;
+  font-family: Raleway, sans-serif;
+}
+nav {
+  background-color: #be9fe1;
+  font-family: Raleway, sans-serif;
+}
+section {
+  background-color: #c9b6e4;
+  font-family: Montserrat, sans-serif;
+}
+footer {
+  background-color: #be9fe1;
+  font-family: Montserrat, sans-serif;
+}
+ul {
+  list-style: none;
+}
+body {
+  background-color: #c9b6e4;
+}
+
+.bodySize {
+  height: 100vh;
+}
+/*GENERAL GRID AREAS*/
+header {
+  grid-area: header;
+  font-size: larger;
+  text-align: center;
+}
+nav {
+  grid-area: nav;
+  border: #be9fe1 solid 1px ;
+  border-bottom-right-radius: 50px;
+  border-bottom-left-radius: 50px;
+}
+section.promo {
+  grid-area: promo;
+}
+section.types {
+  grid-area: types;
+}
+section.terms {
+  grid-area: terms;
+}
+footer {
+  grid-area: footer;
+  padding: 1rem;
+}
+.generalGrid {
+  display: grid;
+  grid-template-areas:
+    "header"
+    "nav"
+    "promo"
+    "types"
+    "terms"
+    "footer";
+  grid-template-rows: auto;
+}
+/* NAV GRID AREAS */
+div.navLinks {
+  grid-area: navlinks;
+  margin-bottom: 20px;
+  font-size: larger;
+}
+.cart {
+  grid-area: cart;
+  display: grid;
+  justify-items: end;
+  margin-right: 10px;
+}
+.logo {
+  grid-area: logo;
+  display: grid;
+  justify-items: stretch;
+}
+.navGrid {
+  display: grid;
+  grid-template-areas:
+    "none logo cart"
+    "navlinks navlinks navlinks ";
+  align-items: end;
+  grid-template-columns: 1fr 3fr 1fr;
+  grid-template-rows: 2fr 1fr;
+  margin: 10px 10px 0px 10px;
+
+}
+
+/* TYPES GRID AREAS */
+.moreButton {
+  grid-area: more;
+  display: grid;
+  align-items: center;
+  margin: 10% 10% 10% 0;
+}
+.typeImg {
+  grid-area: typeImg;
+  display: grid;
+  justify-items: stretch;
+}
+.typeHeader {
+  grid-area: typeHeader;
+  padding-top: 20px;
+}
+.typeBody {
+  grid-area: typeBody;
+  padding-right: 10px;
+}
+.typeGrid {
+  display: grid;
+  grid-template-areas:
+    "typeImg typeHeader"
+    "typeImg typeBody"
+    "typeImg more";
+  grid-template-rows: 1fr 3fr 2fr;
+  grid-template-columns: 1fr 1fr;
+  border: #be9fe1 solid 5px;
+}
+/* TYPESV2 GRID AREAS */
+.moreButtonV2 {
+  grid-area: more;
+  display: grid;
+  align-items: center;
+  margin: 10% 0 10% 10%;
+}
+.typeImg {
+  grid-area: typeImg;
+  padding: 16px;
+}
+.typeHeaderV2 {
+  grid-area: typeHeader;
+  padding-top: 20px;
+  text-align: end;
+}
+.typeBodyV2 {
+  grid-area: typeBody;
+  text-align: end;
+}
+.typeGridV2 {
+  display: grid;
+  grid-template-areas:
+    "typeHeader typeImg"
+    "typeBody typeImg"
+    "more     typeImg";
+  grid-template-rows: 1fr 3fr 2fr;
+  grid-template-columns: 1fr 1fr;
+  background-color: #e1ccec;
+  border: #be9fe1 solid 5px;
+}
+/*FORMATING*/
+.ulFlex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.bannerImg {
+  margin-top: 20px;
+  border: #e1ccec solid 5px;
+
+}
+.bannerStretch {
+  display: grid;
+  justify-items: stretch;
+}
+.termsFlex {
+  display: flex;
+  flex-direction: column;
+}
+.termItemFlex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px 100px 20px 100px;
+  border: #be9fe1 solid 10px;
+  background-color: #be9fe1;
+  border-radius: 7px;
+}
+.typeImgFormat {
+  border: #be9fe1 solid 5px;
+  border-radius: 20px;
+}
+.c1 label {
+  margin-right: 5px;
+  margin-top: 15px;
+}
+.c1 input {
+  margin-top: 17px;
+}
+
+/*FOOTER GRID AREAS*/
+.firstHalf{
+  grid-area: fh;
+}
+.logoFooter{
+  grid-area: logo;
+}
+.lastHalf{
+  grid-area: lh;
+}
+.footerGrid {
+  display: grid;
+  grid-template-areas: 
+  "fh logo lh";
+  grid-template-columns: 1fr 2fr 1fr;
+  border: #be9fe1 solid 1px;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+}
+label {
+  padding-bottom: 5px;
+  padding-right: 5px;
+}
+.pagesNum {
+  display: flex;
+  justify-content: space-evenly;
+  font-size: larger;
+  margin-bottom: 5px;
+}
+.bgBorder {
+  border: #e1ccec solid 1px;
+  border-radius: 20px;
+}
+summary, section.faqGrid a{
+  font-size: x-large;
+}
+form input[value="Escribe tu consulta:"]{
+  padding-bottom: 100px;
+}
+
+/*GENERAL PRODUCT GRID AREAS*/
+.filter {
+  grid-area: filter;
+}
+.market {
+  grid-area: market;
+}
+.generalProductGrid {
+  display: grid;
+  grid-template-areas:
+    "header"
+    "nav"
+    "filter"
+    "market"
+    "footer";
+}
+
+/*FILTER GRID AREAS*/
+.f1 {
+  grid-area: f1;
+}
+.f2 {
+  grid-area: f2;
+}
+.f3 {
+  grid-area: f3;
+  display: grid;
+}
+.c1 {
+  grid-area: c1;
+  display: flex;
+}
+.c2 {
+  grid-area: c2;
+}
+.c3 {
+  grid-area: c3;
+}
+.c4 {
+  grid-area: c4;
+}
+.search {
+  grid-area: search;
+}
+.header {
+  grid-area: header;
+}
+.f1,
+.f2,
+.f3,
+.search {
+  display: grid;
+}
+.filterGrid {
+  display: grid;
+  padding: 20px;
+  grid-template-areas:
+    "header header header"
+    "f1     f2     none"
+    "f1     f2     c1"
+    "f3     f3     f3"
+    "c2     c3     c4"
+    "search search search";
+  gap: 20px;
+  background-color: #e1ccec;
+  margin: 20px;
+}
+.marketGrid {
+  display: grid;
+  grid-template-areas:
+    "typeImg typeHeader"
+    "typeImg typeBody"
+    "typeImg more";
+  grid-template-rows: 1fr 3fr 2fr;
+  grid-template-columns: 1fr 1fr;
+  background-color: #e1ccec;
+  margin: 20px;
+}
+/*NOSOTROS GENERAL GRID*/
+
+.nosGeneralGrid{
+  display: grid;
+  grid-template-rows: 1fr 0.5fr auto auto;
+  margin: 20px;
+  justify-items: center;
+  gap: 20px;
+}
+
+.nosotrosCards{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: #e1ccec;
+  border: #be9fe1 solid 5px;
+  border-radius: 20px;
+  padding: 20px;
+}
+.slide {
+  font-size: 20px;
+  font-weight: 200;
+  letter-spacing: 1px;
+  padding: 13px 30px 13px;
+  outline: 0;
+  border: 1px solid black;
+  cursor: pointer;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+/* FAQ GRID AREA */
+.faqGrid{
+  display: grid;
+  grid-template-rows: 0.5fr 0.5fr 4fr 0.5fr;
+  margin: 20px;
+  gap: 20px;
+}
+.asksGrid{
+  display: grid;
+  gap: 30px;
+}
+/* CONTACT GRID AREA */
+.contactGrid{
+  display: grid;
+  grid-template-rows: auto;
+  margin: 20px;
+  gap: 20px;
+}
+.slide i {
+  opacity: 0;
+  font-size: 13px;
+  transition: 0.2s;
+  position: absolute;
+  right: 10px;
+  top: 21px;
+  transition: transform 1;
+}
+
+.slide div {
+  transition: transform 0.8s;
+}
+
+.slide:hover div {
+  transform: translateX(-6px);
+}
+
+.slide::after {
+  content: "";
+  background-color: #6700dd;
+  width: 100%;
+  z-index: -1;
+  position: absolute;
+  height: 100%;
+  top: 7px;
+  left: 7px;
+}
+
+.slide:hover i {
+  opacity: 1;
+  transform: translateX(-6px);
+}
+@media screen and (min-width: 768px){
+  .navGrid{
+    grid-template-rows: 2fr 1fr;
+  }
+  .type1{
+    grid-area: type1;
+  }
+  .type2{
+    grid-area: type2;
+  }
+  .type3{
+    grid-area: type3;
+  }
+  .type4{
+    grid-area: type4;
+  }
+  .cardGrid{
+    display: grid;
+    grid-template-areas: 
+    "type1 type2"
+    "type3 type4";
+    gap: 5px;
+  }
+  .typeGrid{
+    grid-template-areas: 
+    "typeHeader"
+    "typeImg"
+    "typeBody"
+    "more";
+    border: none;
+    justify-items: center;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr;
+    border: #e1ccec solid 1px;
+    border-radius: 20px;
+    background-color: #e1ccec;
+    margin-left: 20px;
+    margin-right: 10px;
+    margin-top: 20px;
+  }
+  .typeBody{
+    padding-left: 20px;
+    padding-right: 20px;
+    word-wrap: break-word;
+  }
+  .moreButton{
+    margin: 10px;
+  }
+  .typeGridV2{
+    grid-template-areas: 
+    "typeHeader"
+    "typeImg"
+    "typeBody"
+    "more";
+    border: #e1ccec solid 1px;
+    justify-items: center;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr;
+    background-color: #e1ccec;
+    border-radius: 20px;
+    margin-right: 20px;
+    margin-left: 10px;
+    margin-top: 20px;
+  }
+  .typeBodyV2{
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: start;
+    word-wrap: break-word;
+  }
+  .moreButtonV2{
+    margin: 10px;
+  }
+
+  /* PRODUCT QUERY */
+  .prod1{
+    grid-area: prod1;
+  }
+  .prod2{
+    grid-area: prod2;
+  }
+  .prod3{
+    grid-area: prod3;
+  }
+  .prod4{
+    grid-area: prod4;
+  }
+  .prod5{
+    grid-area: prod5;
+  }
+  .prod6{
+    grid-area: prod6;
+  }
+  .pagesNum{
+    grid-area: pn;
+  }
+  .pagesFormat{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 50px;
+  }
+  .prodCardGrid{
+    display: grid;
+    grid-template-areas: 
+    "prod1 prod2"
+    "prod3 prod4"
+    "prod5 prod6"
+    "pn    pn";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 20px;
+    margin-left: 30px;
+    margin-right: 30px;
+
+  }
+  .marketGrid{
+    grid-template-areas: 
+    "typeHeader"
+    "typeImg"
+    "typeBody"
+    "more";
+    grid-template-rows: auto;
+    grid-template-columns: 1fr;
+    margin: 0px;
+  }
+  /*NOSOTROS QUERY*/
+  .nosotrosCards{
+    display: grid;
+    grid-template-areas: 
+    "nosImg nosHd"
+    "nosImg nosBody";
+    grid-template-rows: 1fr 4fr;
+    align-items: start;
+  }
+  .nosHeader{
+    grid-area: nosHd;
+    display: grid;
+    align-items: end;
+  }
+  .nosImg{
+    grid-area: nosImg;
+  }
+  .nosBody{
+    grid-area: nosBody;
+    display: grid;
+  }
+/* FAQ QUERY */
+  .letQuestion{
+    display: flex;
+    justify-content: center;
+  }
+  .faqGrid{
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+  /* CONTACT QUERY*/
+  .formCenter{
+    display: flex;
+    justify-content: center;
+  }
+  .contactGrid{
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+}
+
+@media screen and (min-width: 1024px){
+  *{
+    font-size: 20px;
+  }
+  nav {
+    font-size: 40px;
+  }
+  .termsFlex{
+    display: grid;
+    justify-items: stretch;
+    flex-direction: row;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    margin-left: 50px;
+    margin-right: 50px;
+
+  }
+  
+  .termItemFlex{
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr;
+    margin: 50px;
+    padding-left: 10px;
+    padding-right: 10px;
+    justify-items: center;
+  }
+  .prodCardGrid{
+    grid-template-areas: 
+    "prod1 prod2 prod3"
+    "prod4 prod5 prod6"
+    "pn    pn    pn";
+    grid-template-rows: 3fr 3fr 0.5fr;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .marketGrid{
+    font-size: small;
+  }
+}
